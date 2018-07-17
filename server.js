@@ -33,8 +33,7 @@ const server = http.createServer(app)
 
 // This creates our socket using the instance of the server
 const io = socketIO(server)
-//io.origins('https://gifsappclient.herokuapp.com');
-//io.origins('*:*');
+
 io.on('connection', socket => {
   console.log('New client connected')
  
@@ -55,7 +54,5 @@ io.on('connection', socket => {
     console.log('user disconnected')
   })
 })
-
-
 
 server.listen(port, () => console.log(`Listening on port ${port}`))

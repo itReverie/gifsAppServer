@@ -1,9 +1,15 @@
 {
   "name": "gifsappserver",
   "version": "1.0.0",
+  "description": "server side for my favorite gifs web app.",
+  "keywords": [
+    "express",
+    "socket.io"
+  ],
+  "author": "Brenda Jimenez",
+  "license": "MIT",
   "dependencies": {
     "express": "4.15.4",
-    "express-session": "1.15.5",
     "nodemon": "^1.18.2",
     "socket.io": "2.0.3"
   },
