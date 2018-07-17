@@ -63,6 +63,15 @@ io.on('connection', socket => {
 })
 
 
+app.use((err, req, res, next) => {
+  logger.error({err})
+
+
+  if (!res.headersSent) {
+    res.status(500).send()
+  }
+})
+
 //app.listen(app.get('port'));
 
 server.listen(port, () => console.log(`Listening on port ${port}`))
