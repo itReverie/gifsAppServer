@@ -33,7 +33,8 @@ const server = http.createServer(app)
 
 // This creates our socket using the instance of the server
 const io = socketIO(server)
-io.origins(['https://gifsappclient.herokuapp.com/']);
+//io.origins(['https://gifsappclient.herokuapp.com/']);
+io.origins('*:*');
 io.on('connection', socket => {
   console.log('New client connected')
  
