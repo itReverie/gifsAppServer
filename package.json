@@ -9,12 +9,16 @@
   "author": "Brenda Jimenez",
   "license": "MIT",
   "dependencies": {
-    "express": "4.15.4",
-    "express-session": "1.15.5",
+    "express": "^4.15.4",
     "nodemon": "^1.18.2",
     "socket.io": "2.0.3"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js --exec babel-node --presets env"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "mock-socket": "^8.0.1"
   }
 }
