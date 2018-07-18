@@ -8,7 +8,7 @@ const app = express()
 app.set('port', port );
 
 app.use((err, req, res, next) => {
-  //Note: If I have time add a logger rather than using console.logs in the server side 
+  //TODO: Add a logger rather than using console.logs in the server side 
   console.log({err})
 
   res.header("Access-Control-Allow-Origin", "*");

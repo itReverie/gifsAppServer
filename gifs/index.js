@@ -16,8 +16,10 @@ import { messageTypes } from '../config';
       })
     socket.on('disconnect', () => { console.log('user disconnected')})
   }
-  
+
   //Initializing the web socket
-  export function   init(io) {
+  const init = (io) => {
     io.on('connection', (socket) => addListenersToSocket({io, socket}))
   }
+
+  export {init}
